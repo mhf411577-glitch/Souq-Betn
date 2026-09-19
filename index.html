@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#087443">
+<title>سوق بيتنا | متجر بيتنا</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 180 180%22%3E%0A%3Crect width=%22180%22 height=%22180%22 rx=%2240%22 fill=%22%23fff%22/%3E%0A%3Cpath d=%22M38 78 90 36l52 42v57c0 6-5 11-11 11H49c-6 0-11-5-11-11V78Z%22 fill=%22%23087443%22/%3E%0A%3Cpath d=%22M27 83 90 30l63 53-9 10-54-45-54 45-9-10Z%22 fill=%22%23f28b21%22/%3E%0A%3Cpath d=%22M61 93h58v44H61z%22 fill=%22%23fff%22/%3E%0A%3Cpath d=%22M73 93h34v44H73z%22 fill=%22%23f28b21%22/%3E%0A%3Ccircle cx=%22126%22 cy=%22122%22 r=%2218%22 fill=%22%23087443%22/%3E%0A%3Cpath d=%22M119 122h14M126 115v14%22 stroke=%22%23fff%22 stroke-width=%225%22 stroke-linecap=%22round%22/%3E%0A%3Ctext x=%2290%22 y=%22168%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 font-weight=%22700%22 fill=%22%23087443%22%3E%D8%B3%D9%88%D9%82 %D8%A8%D9%8A%D8%AA%D9%86%D8%A7%3C/text%3E%0A%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap">
+
+<!-- لا تحتاج لتعديل هذا الملف: الصق بيانات Supabase من داخل الصفحة نفسها. -->
+<script>
+  const SUPABASE_URL  = "https://dcvgzfziopbzgoqkdbhg.supabase.co";
+  const SUPABASE_KEY  = "sb_publishable_0Nr_tqoERe0HhAZ2-SHdJA_TZ0GoqGw";
+  const WHATSAPP_NUMBER = "";
+</script>
+
+<style>
+:root{--green:#087443;--green2:#0d8a51;--orange:#f28b21;--cream:#fffaf2;--ink:#14352a;--muted:#718078;--line:#e5ece8}
+*{box-sizing:border-box}body{margin:0;font-family:Cairo,Arial,sans-serif;background:#f7faf8;color:var(--ink)}button,input,select{font:inherit}button{cursor:pointer}
+.container{width:min(1180px,92%);margin:auto}.topbar{background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 16px #14352a12}.nav{height:74px;display:flex;align-items:center;gap:20px}.brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--green);font-size:23px;font-weight:800;white-space:nowrap}.brand img{width:48px;height:48px}.search{display:flex;flex:1;max-width:590px;margin:auto;border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#fafcfb}.search input{border:0;background:transparent;outline:0;padding:12px 15px;flex:1}.search button{border:0;background:var(--green);color:#fff;padding:0 20px}.actions{display:flex;gap:8px}.iconbtn,.cartbtn{background:#fff;border:1px solid var(--line);border-radius:11px;padding:9px 12px}.cartbtn b{background:var(--orange);color:#fff;border-radius:20px;padding:1px 7px}
+.categorybar{background:var(--green);color:#fff}.categories{display:flex;overflow:auto}.categories button{background:transparent;border:0;color:#fff;padding:12px 15px;white-space:nowrap}
+.hero{margin-top:24px;border-radius:24px;overflow:hidden;min-height:350px;background:linear-gradient(110deg,#f7ead7,#eef8f1);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;padding:40px}.pill{display:inline-block;background:#fff;border:1px solid #e7eee9;border-radius:30px;padding:6px 13px;color:var(--green);font-weight:700}.hero h1{font-size:45px;line-height:1.25;margin:15px 0}.hero h1 strong{color:var(--orange)}.hero p{max-width:570px;color:#52665d}.primary{background:var(--green);color:#fff;border:0;border-radius:12px;padding:12px 25px;font-weight:800}.wide{width:100%;margin-top:12px}.hero-art{height:270px;position:relative;display:flex;align-items:center;justify-content:center}.orb{font-size:130px;filter:drop-shadow(0 20px 25px #08744330)}.offer{position:absolute;top:12px;right:10%;background:var(--orange);color:#fff;width:105px;height:105px;border-radius:50%;display:grid;place-content:center;text-align:center;line-height:1.1}.offer b{font-size:28px}.mini-card{position:absolute;bottom:10px;left:8%;background:#fff;padding:10px 14px;border-radius:12px;box-shadow:0 10px 30px #14352a16}.mini-card.two{left:auto;right:5%;bottom:20px}
+.section{padding:30px 0}.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}.section-head h2{margin:0}.link{border:0;background:none;color:var(--green);font-weight:700}.category-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}.cat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 8px;text-align:center;transition:.2s}.cat:hover{transform:translateY(-3px);box-shadow:0 10px 25px #14352a10}.cat .emoji{font-size:38px}.cat h3{font-size:13px;margin:8px 0 0}
+.product-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}.product{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}.product-img{height:185px;background:linear-gradient(135deg,#f2f6f3,#fff2e4);display:grid;place-items:center;font-size:76px}.product-body{padding:12px}.product h3{font-size:14px;margin:0 0 5px}.desc{font-size:11px;color:var(--muted);min-height:34px}.price{font-size:17px;font-weight:800;color:var(--green);margin:8px 0}.product-actions{display:flex;gap:7px}.wa,.add{flex:1;border:0;border-radius:9px;padding:8px;font-size:12px;font-weight:700}.wa{background:#e8f8ef;color:#087443}.add{background:#087443;color:#fff}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;padding:15px 0 45px}.features>div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}.features span{font-size:30px}.features h3{margin:7px 0;font-size:15px}.features p{font-size:12px;color:var(--muted);margin:0}
+footer{background:#103e31;color:#e8f5ef;padding:38px 0 0}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:30px}.footer-logo{width:60px;filter:brightness(0) invert(1)}footer a{display:block;color:#d8eee5;text-decoration:none;margin:7px 0;font-size:13px}.copyright{text-align:center;border-top:1px solid #ffffff20;margin-top:30px;padding:14px;font-size:12px}
+.modal{display:none;position:fixed;inset:0;background:#08251c88;z-index:50;place-items:center;padding:20px}.modal.show{display:grid}.modal-box{width:min(440px,100%);background:#fff;border-radius:20px;padding:25px;position:relative}.modal-box h2{margin-top:0}.modal-box input{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;margin:6px 0;outline-color:var(--green)}.close{position:absolute;left:15px;top:12px;border:0;background:none;font-size:27px}.role{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}.role button{padding:10px;border:1px solid var(--line);background:#fff;border-radius:10px}.role .active{border-color:var(--green);color:var(--green);font-weight:800}.hint{font-size:12px;color:var(--muted)}
+.filters select{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px}
+@media(max-width:900px){.category-grid{grid-template-columns:repeat(4,1fr)}.product-grid{grid-template-columns:repeat(3,1fr)}.hero{grid-template-columns:1fr}.hero-art{display:none}.features{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.nav{height:auto;padding:10px 0;flex-wrap:wrap}.brand{font-size:18px}.brand img{width:40px}.search{order:3;max-width:none;flex-basis:100%}.actions{margin-right:auto}.category-grid{grid-template-columns:repeat(2,1fr)}.product-grid{grid-template-columns:repeat(2,1fr);gap:10px}.product-img{height:145px;font-size:58px}.hero{padding:25px}.hero h1{font-size:32px}.features{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.section{padding:20px 0}}
+
+
+.setup{background:#fff7e8;border-bottom:2px solid var(--orange);padding:14px 0;font-size:14px;line-height:1.8}
+.setup[hidden]{display:none}.setup b{color:#a85a00}.setup .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.setup .btn{background:var(--green);color:#fff;border:0;border-radius:10px;padding:9px 16px;font-weight:700;text-decoration:none;font-size:13px}
+.setup input{display:block;width:100%;max-width:520px;padding:10px 12px;border:1px solid #e0cfae;border-radius:10px;margin:6px 0;background:#fff;font:inherit;font-size:13px}.setup p{margin:12px 0 4px}.setup-err{color:#b3261e}
+.setup .btn.alt{background:#fff;color:var(--green);border:1px solid var(--green)}
+.userbox{display:flex;gap:8px}.iconbtn.sell{background:var(--orange);color:#fff;border-color:var(--orange);font-weight:700}
+.modal-box{max-height:92vh;overflow:auto}
+.modal-box select,.modal-box textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;margin:6px 0;outline-color:var(--green)}
+.modal-box textarea{min-height:100px;resize:vertical}
+.desc{white-space:pre-line}.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:30px 0}
+.msg{font-size:13px;min-height:20px;margin:8px 0 0}.msg.err{color:#b3261e}.msg.ok{color:var(--green)}
+button:disabled{opacity:.6;cursor:wait}
+.footer-links a{cursor:pointer}
+.pubbar{background:#e8f8ef;border-bottom:2px solid var(--green);padding:12px 0;font-size:14px;line-height:1.9}.pubbar[hidden]{display:none}
+.pubbar .btn{background:var(--green);color:#fff;border:0;border-radius:10px;padding:8px 14px;font-weight:700;font-size:13px;margin:2px 0}
+.pubbar .btn.alt{background:#fff;color:var(--green);border:1px solid var(--green)}.pubbar a{color:var(--green);font-weight:700}
+.setup.baked .steps{display:none}
+.del{width:100%;margin-top:7px;border:1px solid #f0c8c4;background:#fff5f4;color:#b3261e;border-radius:9px;padding:7px;font-size:12px;font-weight:700}
+
+</style>
+</head>
+<body>
+
+<div class="setup" id="setup" hidden>
+  <div class="container">
+    <b id="setupTitle">خطوتان فقط لربط المتجر</b>
+    <div id="setupText" class="setup-err"></div>
+    <div class="steps">
+    <p><b>1)</b> انسخ كود قاعدة البيانات وشغّله في Supabase (مرة واحدة فقط):</p>
+    <div class="row">
+      <button class="btn" onclick="copySQL()">نسخ كود SQL</button>
+      <a class="btn alt" href="https://supabase.com/dashboard/project/_/sql/new" target="_blank" rel="noopener">فتح SQL Editor ← الصق ← Run</a>
+    </div>
+    <p><b>2)</b> الصق بيانات الربط (من Project Settings ← API):</p>
+    <input id="cfgUrl" dir="ltr" placeholder="Project URL  مثال: https://abcd.supabase.co">
+    <input id="cfgKey" dir="ltr" placeholder="anon / publishable key">
+    <input id="cfgWa" dir="ltr" inputmode="tel" placeholder="رقم واتساب (اختياري)  مثال: 9647701234567">
+    <div class="row"><button class="btn" onclick="saveConfig()">حفظ وربط المتجر</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="pubbar" id="pubbar" hidden>
+  <div class="container">
+    <b>المتجر مربوط ويعمل على جهازك فقط.</b> لتنشره للناس: نزّل النسخة الجاهزة ثم ارفعها في
+    <a href="https://app.netlify.com/drop" target="_blank" rel="noopener">app.netlify.com/drop</a>
+    <div><button class="btn" onclick="downloadSite('zip')">تنزيل نسخة جاهزة للنشر (zip)</button>
+    <button class="btn alt" onclick="downloadSite('html')">أو ملف index.html</button></div>
+  </div>
+</div>
+
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#"><img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 180 180%22%3E%0A%3Crect width=%22180%22 height=%22180%22 rx=%2240%22 fill=%22%23fff%22/%3E%0A%3Cpath d=%22M38 78 90 36l52 42v57c0 6-5 11-11 11H49c-6 0-11-5-11-11V78Z%22 fill=%22%23087443%22/%3E%0A%3Cpath d=%22M27 83 90 30l63 53-9 10-54-45-54 45-9-10Z%22 fill=%22%23f28b21%22/%3E%0A%3Cpath d=%22M61 93h58v44H61z%22 fill=%22%23fff%22/%3E%0A%3Cpath d=%22M73 93h34v44H73z%22 fill=%22%23f28b21%22/%3E%0A%3Ccircle cx=%22126%22 cy=%22122%22 r=%2218%22 fill=%22%23087443%22/%3E%0A%3Cpath d=%22M119 122h14M126 115v14%22 stroke=%22%23fff%22 stroke-width=%225%22 stroke-linecap=%22round%22/%3E%0A%3Ctext x=%2290%22 y=%22168%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 font-weight=%22700%22 fill=%22%23087443%22%3E%D8%B3%D9%88%D9%82 %D8%A8%D9%8A%D8%AA%D9%86%D8%A7%3C/text%3E%0A%3C/svg%3E" alt="سوق بيتنا"><span>سوق بيتنا</span></a>
+    <div class="search"><input id="searchInput" placeholder="ابحث عن المنتجات أو الفئات..." autocomplete="off"><button onclick="doSearch()">بحث</button></div>
+    <div class="actions">
+      <div class="userbox" id="userArea"></div>
+      <button class="cartbtn" onclick="openCart()">السلة <b id="cartCount">0</b></button>
+    </div>
+  </div>
+  <div class="categorybar"><div class="container categories" id="categoryNav"></div></div>
+</header>
+
+<main>
+  <section class="hero container">
+    <div class="hero-copy">
+      <span class="pill">عروض سوق بيتنا</span>
+      <h1>كل ما تحتاجه..<br><strong>في بيتك</strong></h1>
+      <p>تسوق منتجات متنوعة من العناية والأجهزة والملابس والأغراض المستعملة، واطلب مباشرة عبر واتساب.</p>
+      <button class="primary" onclick="scrollToProducts()">تسوق الآن</button>
+    </div>
+    <div class="hero-art">
+      <div class="offer">خصم<br><b>50%</b></div>
+      <div class="orb">🛍️</div>
+      <div class="mini-card">🚚 توصيل سريع</div>
+      <div class="mini-card two">💬 طلب عبر واتساب</div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="section-head"><h2>الأقسام الرئيسية</h2><button class="link" onclick="showAll()">عرض الكل</button></div>
+    <div class="category-grid" id="categoryGrid"></div>
+  </section>
+
+  <section class="container section" id="productsSection">
+    <div class="section-head"><h2 id="productsTitle">أحدث المنتجات</h2><div class="filters"><select id="sort"><option value="new">الأحدث</option><option value="low">السعر: الأقل</option><option value="high">السعر: الأعلى</option></select></div></div>
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+
+  <section class="features container">
+    <div><span>💬</span><h3>الطلب عبر واتساب</h3><p>رسالة تلقائية باسم المنتج ورقم الطلب والرابط.</p></div>
+    <div><span>📷</span><h3>رفع صور المنتجات</h3><p>البائع يختار الصور من هاتفه وتظهر مباشرة في المتجر.</p></div>
+    <div><span>🔐</span><h3>تسجيل بالبريد الإلكتروني</h3><p>التسجيل والدخول بالبريد وكلمة المرور فقط.</p></div>
+    <div><span>☁️</span><h3>حفظ آمن للمنتجات</h3><p>كل المنتجات محفوظة في قاعدة بيانات حقيقية.</p></div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div><img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 180 180%22%3E%0A%3Crect width=%22180%22 height=%22180%22 rx=%2240%22 fill=%22%23fff%22/%3E%0A%3Cpath d=%22M38 78 90 36l52 42v57c0 6-5 11-11 11H49c-6 0-11-5-11-11V78Z%22 fill=%22%23087443%22/%3E%0A%3Cpath d=%22M27 83 90 30l63 53-9 10-54-45-54 45-9-10Z%22 fill=%22%23f28b21%22/%3E%0A%3Cpath d=%22M61 93h58v44H61z%22 fill=%22%23fff%22/%3E%0A%3Cpath d=%22M73 93h34v44H73z%22 fill=%22%23f28b21%22/%3E%0A%3Ccircle cx=%22126%22 cy=%22122%22 r=%2218%22 fill=%22%23087443%22/%3E%0A%3Cpath d=%22M119 122h14M126 115v14%22 stroke=%22%23fff%22 stroke-width=%225%22 stroke-linecap=%22round%22/%3E%0A%3Ctext x=%2290%22 y=%22168%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 font-weight=%22700%22 fill=%22%23087443%22%3E%D8%B3%D9%88%D9%82 %D8%A8%D9%8A%D8%AA%D9%86%D8%A7%3C/text%3E%0A%3C/svg%3E" class="footer-logo" alt=""><h3>سوق بيتنا</h3><p>منصة تسوق عربية بسيطة وسريعة.</p></div>
+    <div class="footer-links"><h4>روابط</h4><a onclick="showAll();scrollToProducts()">المنتجات</a><a onclick="openAuth()">تسجيل الدخول</a><a id="cfgLink" onclick="showSetup('')">إعدادات الربط</a></div>
+    <div class="footer-links"><h4>للبائعين</h4><a onclick="openAuth('seller')">إنشاء حساب بائع</a><a onclick="openSeller()">نشر منتج</a></div>
+    <div><h4>الدعم</h4><p>الطلب يتم مباشرة مع البائع عبر واتساب.</p></div>
+  </div>
+  <div class="copyright">© 2026 سوق بيتنا — متجر بيتنا</div>
+</footer>
+
+<!-- نافذة الدخول / إنشاء حساب -->
+<div class="modal" id="authModal"><div class="modal-box">
+  <button class="close" onclick="closeModal('authModal')">×</button>
+  <h2 id="authTitle">تسجيل الدخول</h2>
+  <p class="hint">البريد الإلكتروني وكلمة المرور فقط.</p>
+  <input id="authEmail" type="email" placeholder="البريد الإلكتروني" autocomplete="email">
+  <input id="authPass" type="password" placeholder="كلمة المرور (6 أحرف على الأقل)" autocomplete="current-password">
+  <select id="authRole"><option value="buyer">مشتري</option><option value="seller">بائع</option></select>
+  <button id="authBtn" class="primary wide" data-mode="login" onclick="submitAuth()">دخول</button>
+  <button id="authSwitch" class="link wide" onclick="toggleAuth()">إنشاء حساب جديد</button>
+</div></div>
+
+<!-- نافذة السلة -->
+<div class="modal" id="cartModal"><div class="modal-box">
+  <button class="close" onclick="closeModal('cartModal')">×</button>
+  <h2>سلة الطلب</h2><div id="cartItems"></div>
+  <div class="cart-total">الإجمالي: <b id="cartTotal">0</b> د.ع</div>
+  <button class="primary wide" onclick="checkout()">إتمام الطلب عبر واتساب</button>
+</div></div>
+
+<!-- نافذة نشر منتج (للبائع) -->
+<div class="modal" id="sellerModal"><div class="modal-box">
+  <button class="close" onclick="closeModal('sellerModal')">×</button>
+  <h2>نشر منتج جديد</h2>
+  <input id="pName" placeholder="اسم المنتج">
+  <select id="pCat"></select>
+  <input id="pPrice" type="number" min="0" step="1" inputmode="numeric" placeholder="السعر بالدينار العراقي">
+  <input id="pPhone" inputmode="tel" placeholder="رقم الهاتف للتواصل حول هذا المنتج">
+  <textarea id="pDesc" placeholder="وصف المنتج"></textarea>
+  <input id="pImages" type="file" accept="image/*" multiple>
+  <button id="pBtn" class="primary wide" onclick="publishProduct()">نشر المنتج</button>
+  <p id="pMsg" class="msg"></p>
+</div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* ───────── كود SQL الذي يجهز قاعدة البيانات (يُنسخ بزر "نسخ كود SQL") ───────── */
+const SETUP_SQL = `-- سوق بيتنا: شغّل هذا الملف مرة واحدة في Supabase > SQL Editor.
+create extension if not exists pgcrypto;
+
+create table if not exists public.profiles (
+  id uuid primary key references auth.users(id) on delete cascade,
+  email text,
+  role text not null default 'buyer' check (role in ('buyer','seller')),
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.products (
+  id uuid primary key default gen_random_uuid(),
+  seller_id uuid not null references public.profiles(id) on delete cascade,
+  name text not null,
+  category text not null check (category in (
+    'العناية بالبشرة','العناية بالشعر','العناية بالجسم',
+    'الأجهزة المنزلية','الأجهزة الإلكترونية','الملابس','الأغراض المستعملة'
+  )),
+  description text not null default '',
+  price integer not null check (price >= 0),
+  phone text not null default '',
+  image_urls text[] not null default '{}',
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create index if not exists products_category_idx on public.products(category);
+create index if not exists products_seller_idx on public.products(seller_id);
+create index if not exists products_created_idx on public.products(created_at desc);
+
+create or replace function public.handle_new_user()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  insert into public.profiles (id,email,role)
+  values (
+    new.id,new.email,
+    case when new.raw_user_meta_data->>'role'='seller' then 'seller' else 'buyer' end
+  )
+  on conflict (id) do update set email=excluded.email;
+  return new;
+end;
+$$;
+
+drop trigger if exists on_auth_user_created on auth.users;
+create trigger on_auth_user_created
+after insert on auth.users
+for each row execute procedure public.handle_new_user();
+
+create or replace function public.is_seller(uid uuid)
+returns boolean
+language sql
+stable
+security definer
+set search_path=public
+as $$
+  select exists(select 1 from public.profiles where id=uid and role='seller');
+$$;
+
+alter table public.profiles enable row level security;
+alter table public.products enable row level security;
+
+drop policy if exists "profiles_read_own" on public.profiles;
+create policy "profiles_read_own"
+on public.profiles for select to authenticated
+using ((select auth.uid())=id);
+
+drop policy if exists "products_public_read" on public.products;
+create policy "products_public_read"
+on public.products for select to anon,authenticated
+using (true);
+
+drop policy if exists "seller_insert_products" on public.products;
+create policy "seller_insert_products"
+on public.products for insert to authenticated
+with check ((select auth.uid())=seller_id and public.is_seller((select auth.uid())));
+
+drop policy if exists "seller_update_products" on public.products;
+create policy "seller_update_products"
+on public.products for update to authenticated
+using ((select auth.uid())=seller_id and public.is_seller((select auth.uid())))
+with check ((select auth.uid())=seller_id and public.is_seller((select auth.uid())));
+
+drop policy if exists "seller_delete_products" on public.products;
+create policy "seller_delete_products"
+on public.products for delete to authenticated
+using ((select auth.uid())=seller_id and public.is_seller((select auth.uid())));
+
+insert into storage.buckets(id,name,public)
+values('product-images','product-images',true)
+on conflict(id) do update set public=true;
+
+drop policy if exists "seller_upload_product_images" on storage.objects;
+create policy "seller_upload_product_images"
+on storage.objects for insert to authenticated
+with check (
+ bucket_id='product-images'
+ and public.is_seller((select auth.uid()))
+ and (storage.foldername(name))[1]=(select auth.uid()::text)
+);
+
+drop policy if exists "seller_update_product_images" on storage.objects;
+create policy "seller_update_product_images"
+on storage.objects for update to authenticated
+using (
+ bucket_id='product-images'
+ and (storage.foldername(name))[1]=(select auth.uid()::text)
+)
+with check (
+ bucket_id='product-images'
+ and (storage.foldername(name))[1]=(select auth.uid()::text)
+);
+
+drop policy if exists "seller_delete_product_images" on storage.objects;
+create policy "seller_delete_product_images"
+on storage.objects for delete to authenticated
+using (
+ bucket_id='product-images'
+ and (storage.foldername(name))[1]=(select auth.uid()::text)
+);
+
+drop policy if exists "public_read_product_images" on storage.objects;
+create policy "public_read_product_images"
+on storage.objects for select to anon,authenticated
+using(bucket_id='product-images');
+
+grant select on public.products to anon,authenticated;
+grant select,insert,update,delete on public.products to authenticated;
+grant select on public.profiles to authenticated;
+`;
+
+/* ───────── الاتصال بـ Supabase ───────── */
+let SAVED = {};
+try { SAVED = JSON.parse(localStorage.getItem('souq_cfg') || '{}'); } catch (e) {}
+const okUrl = u => /^https?:\/\/[^\s]+$/.test(u || '') && !String(u).includes('PASTE');
+const okKey = k => String(k || '').length > 20 && !String(k).includes('PASTE');
+const BAKED = okUrl(SUPABASE_URL) && okKey(SUPABASE_KEY);
+const CFG_URL = BAKED ? SUPABASE_URL : (SAVED.url || '');
+const CFG_KEY = BAKED ? SUPABASE_KEY : (SAVED.key || '');
+const CFG_WA  = /X/.test(WHATSAPP_NUMBER) ? (SAVED.wa || '') : WHATSAPP_NUMBER;
+const CONFIGURED = okUrl(CFG_URL) && okKey(CFG_KEY);
+const sb = (CONFIGURED && window.supabase) ? window.supabase.createClient(CFG_URL, CFG_KEY) : null;
+
+/* ───────── بيانات أساسية ───────── */
+const $ = id => document.getElementById(id);
+const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const money = n => new Intl.NumberFormat('ar-IQ').format(Number(n) || 0);
+const CATS = ['العناية بالبشرة','العناية بالشعر','العناية بالجسم','الأجهزة المنزلية','الأجهزة الإلكترونية','الملابس','الأغراض المستعملة'];
+const EMOJI = {'العناية بالبشرة':'🧴','العناية بالشعر':'💇','العناية بالجسم':'🧼','الأجهزة المنزلية':'🏠','الأجهزة الإلكترونية':'📱','الملابس':'👕','الأغراض المستعملة':'♻️'};
+const DEMO = [
+  ['BT-1001','سيروم فيتامين C للبشرة','العناية بالبشرة',12000,'سيروم خفيف للعناية اليومية.'],
+  ['BT-1002','زيت الأرغان للشعر','العناية بالشعر',10500,'زيت للعناية بالشعر.'],
+  ['BT-1003','لوشن مرطب للجسم','العناية بالجسم',13750,'ترطيب يومي.'],
+  ['BT-1004','قلاية هوائية','الأجهزة المنزلية',85000,'قلاية منزلية عملية.'],
+  ['BT-1005','هاتف Galaxy A55','الأجهزة الإلكترونية',550000,'هاتف ذكي.'],
+  ['BT-1006','قميص رجالي','الملابس',25000,'قميص أنيق.'],
+  ['BT-1007','طاولة منزلية مستعملة','الأغراض المستعملة',45000,'بحالة جيدة.']
+].map(x => ({id:x[0], name:x[1], category:x[2], price:x[3], description:x[4], image_urls:[]}));
+
+let products = CONFIGURED ? [] : [...DEMO];
+let activeCat = '';
+let user = null, profile = null;
+let cart = [];
+try { cart = JSON.parse(localStorage.getItem('betna_cart') || '[]'); } catch (e) { cart = []; }
+
+/* ───────── عرض الأقسام والمنتجات ───────── */
+function renderCategories() {
+  $('categoryNav').innerHTML = CATS.map(x => `<button onclick="filterCat('${x}')">${x}</button>`).join('');
+  $('categoryGrid').innerHTML = CATS.map(x => `<button class="cat" onclick="filterCat('${x}')"><div class="emoji">${EMOJI[x]}</div><h3>${x}</h3></button>`).join('');
+  $('pCat').innerHTML = CATS.map(x => `<option value="${x}">${x}</option>`).join('');
+}
+function renderProducts() {
+  let a = [...products];
+  if (activeCat) a = a.filter(p => p.category === activeCat);
+  const q = ($('searchInput').value || '').trim().toLowerCase();
+  if (q) a = a.filter(p => (p.name + ' ' + p.category + ' ' + p.description).toLowerCase().includes(q));
+  const s = $('sort').value;
+  if (s === 'low') a.sort((x, y) => x.price - y.price);
+  if (s === 'high') a.sort((x, y) => y.price - x.price);
+  $('productsTitle').textContent = activeCat || 'أحدث المنتجات';
+  $('productGrid').innerHTML = a.map(p => {
+    const img = p.image_urls && p.image_urls[0]
+      ? `<img src="${esc(p.image_urls[0])}" alt="${esc(p.name)}" loading="lazy" style="width:100%;height:100%;object-fit:cover">`
+      : (EMOJI[p.category] || '🛍️');
+    return `<article class="product"><div class="product-img">${img}</div><div class="product-body">
+      <h3>${esc(p.name)}</h3><div class="desc">${esc(p.description)}</div><div class="price">${money(p.price)} د.ع</div>
+      <div class="product-actions"><button class="wa" onclick="orderWhatsApp('${esc(p.id)}')">واتساب</button><button class="add" onclick="addCart('${esc(p.id)}')">أضف للسلة</button></div>${user && p.seller_id === user.id ? `<button class="del" onclick="deleteProduct('${esc(p.id)}')">حذف منتجي</button>` : ''}</div></article>`;
+  }).join('') || `<p class="empty">${CONFIGURED ? 'لا توجد منتجات بعد. سجّل كبائع وانشر أول منتج.' : 'لا توجد منتجات مطابقة.'}</p>`;
+}
+function filterCat(x) { activeCat = x; renderProducts(); scrollToProducts(); }
+function showAll() { activeCat = ''; $('searchInput').value = ''; renderProducts(); }
+function doSearch() { activeCat = ''; renderProducts(); }
+function scrollToProducts() { $('productsSection').scrollIntoView({behavior:'smooth'}); }
+
+/* ───────── السلة وواتساب ───────── */
+const findProduct = id => products.find(p => String(p.id) === String(id));
+function saveCart() { try { localStorage.setItem('betna_cart', JSON.stringify(cart)); } catch (e) {} $('cartCount').textContent = cart.length; }
+function addCart(id) { cart.push(id); saveCart(); }
+function openCart() {
+  const a = cart.map(findProduct).filter(Boolean);
+  $('cartItems').innerHTML = a.length ? a.map(p => `<p>${esc(p.name)} — ${money(p.price)} د.ع</p>`).join('') : 'السلة فارغة';
+  $('cartTotal').textContent = money(a.reduce((s, p) => s + Number(p.price), 0));
+  $('cartModal').classList.add('show');
+}
+function closeModal(id) { $(id).classList.remove('show'); }
+function waNumber(phone) {            // يحوّل 0770... إلى 964770... (افتراض: العراق)
+  let d = String(phone || '').replace(/\D/g, '');
+  if (!d) return '';
+  if (d.startsWith('00')) d = d.slice(2);
+  else if (d.startsWith('0')) d = '964' + d.slice(1);
+  else if (d.length === 10 && d[0] === '7') d = '964' + d;
+  return d.length >= 11 ? d : '';
+}
+function openWA(msg, num) {
+  const n = num || waNumber(CFG_WA);
+  window.open((n ? `https://wa.me/${n}?text=` : 'https://wa.me/?text=') + encodeURIComponent(msg), '_blank');
+}
+function orderWhatsApp(id) {
+  const p = findProduct(id); if (!p) return;
+  openWA(`مرحباً، أريد طلب المنتج:\nاسم المنتج: ${p.name}\nرقم المنتج: ${p.id}\nالسعر: ${money(p.price)} د.ع\nرابط المتجر: ${location.href.split('#')[0]}`, waNumber(p.phone));
+}
+function checkout() {
+  const a = cart.map(findProduct).filter(Boolean);
+  if (!a.length) return alert('السلة فارغة');
+  const nums = [...new Set(a.map(p => waNumber(p.phone)))];
+  if (nums.length > 1 && !CFG_WA) return alert('السلة فيها منتجات من أكثر من بائع. اطلب كل منتج على حدة بزر واتساب.');
+  const target = nums.length === 1 ? nums[0] : '';
+  openWA('مرحباً، أريد طلب المنتجات التالية من سوق بيتنا:\n' + a.map(p => `- ${p.name} (${p.id}) — ${money(p.price)} د.ع`).join('\n'), target);
+}
+
+/* ───────── رسائل الأخطاء بالعربية ───────── */
+function arabicError(e) {
+  const m = String((e && e.message) || e || '');
+  if (/invalid login/i.test(m)) return 'البريد أو كلمة المرور غير صحيحة.';
+  if (/already registered|already been registered/i.test(m)) return 'هذا البريد مسجّل مسبقاً، سجّل الدخول بدلاً من ذلك.';
+  if (/not confirmed/i.test(m)) return 'أكّد بريدك الإلكتروني أولاً من الرسالة التي وصلتك.';
+  if (/rate limit/i.test(m)) return 'محاولات كثيرة. انتظر قليلاً ثم أعد المحاولة.';
+  if (/row-level security|violates/i.test(m)) return 'لا تملك صلاحية هذا الإجراء. تأكد أن حسابك حساب بائع.';
+  if (/Failed to fetch|NetworkError/i.test(m)) return 'تعذر الاتصال. تأكد من الإنترنت ومن رابط Supabase.';
+  return m || 'حدث خطأ غير متوقع.';
+}
+
+/* ───────── الحساب ───────── */
+function openAuth(mode = 'login') {
+  const su = mode === 'signup' || mode === 'seller';
+  $('authTitle').textContent = su ? 'إنشاء حساب' : 'تسجيل الدخول';
+  $('authBtn').textContent = su ? 'إنشاء الحساب' : 'دخول';
+  $('authBtn').dataset.mode = su ? 'signup' : 'login';
+  $('authSwitch').textContent = su ? 'لدي حساب بالفعل' : 'إنشاء حساب جديد';
+  $('authRole').style.display = su ? 'block' : 'none';
+  $('authPass').autocomplete = su ? 'new-password' : 'current-password';
+  if (mode === 'seller') $('authRole').value = 'seller';
+  $('authModal').classList.add('show');
+}
+function toggleAuth() { openAuth($('authBtn').dataset.mode === 'signup' ? 'login' : 'signup'); }
+
+async function submitAuth() {
+  const email = $('authEmail').value.trim(), password = $('authPass').value;
+  const role = $('authRole').value, mode = $('authBtn').dataset.mode;
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || password.length < 6)
+    return alert('أدخل بريداً صحيحاً وكلمة مرور من 6 أحرف أو أكثر.');
+  if (!sb) return alert('أكمل إعداد Supabase أولاً (انظر الشريط في أعلى الصفحة).');
+  $('authBtn').disabled = true;
+  try {
+    if (mode === 'signup') {
+      const r = await sb.auth.signUp({email, password, options: Object.assign({data: {role}}, /^https?:/.test(location.protocol) ? {emailRedirectTo: location.origin + location.pathname} : {})});
+      if (r.error) throw r.error;
+      if (r.data.user && r.data.user.identities && r.data.user.identities.length === 0) throw new Error('already registered');
+      closeModal('authModal');
+      if (r.data.session) { await setUser(r.data.session.user); alert('تم إنشاء الحساب وتسجيل الدخول.'); if (role === 'seller') openSeller(); }
+      else alert('تم إنشاء الحساب. افتح بريدك وأكّد الحساب ثم سجّل الدخول.');
+    } else {
+      const r = await sb.auth.signInWithPassword({email, password});
+      if (r.error) throw r.error;
+      closeModal('authModal');
+      await setUser(r.data.user);
+      if (profile && profile.role === 'seller') openSeller(); else alert('تم تسجيل الدخول بنجاح.');
+    }
+  } catch (e) { alert(arabicError(e)); }
+  finally { $('authBtn').disabled = false; }
+}
+async function setUser(u) {
+  user = u || null; profile = null;
+  if (user && sb) {
+    const r = await sb.from('profiles').select('id,email,role').eq('id', user.id).maybeSingle();
+    profile = r.data || null;
+  }
+  renderUser(); renderProducts();
+}
+function renderUser() {
+  $('userArea').innerHTML = !user
+    ? '<button class="iconbtn" onclick="openAuth()">حسابي</button>'
+    : (profile && profile.role === 'seller' ? '<button class="iconbtn sell" onclick="openSeller()">نشر منتج</button>' : '') +
+      '<button class="iconbtn" onclick="doLogout()">خروج</button>';
+}
+async function doLogout() { if (sb) await sb.auth.signOut(); await setUser(null); }
+
+/* ───────── نشر منتج (للبائع) ───────── */
+function openSeller() {
+  if (!sb) return alert('أكمل إعداد Supabase أولاً (انظر الشريط في أعلى الصفحة).');
+  if (!user) return openAuth('seller');
+  if (!profile || profile.role !== 'seller') return alert('هذا الحساب ليس حساب بائع. أنشئ حساباً جديداً واختر "بائع".');
+  $('pMsg').textContent = ''; $('pMsg').className = 'msg';
+  $('sellerModal').classList.add('show');
+}
+function setMsg(t, cls) { $('pMsg').textContent = t; $('pMsg').className = 'msg ' + (cls || ''); }
+
+async function publishProduct() {
+  try {
+    const name = $('pName').value.trim(), category = $('pCat').value, price = Number($('pPrice').value);
+    const phone = $('pPhone').value.trim(), description = $('pDesc').value.trim();
+    const files = [...$('pImages').files];
+    if (!name || !description || !Number.isFinite(price) || price < 0) throw new Error('أكمل اسم المنتج والوصف والسعر بشكل صحيح.');
+    if (!waNumber(phone)) throw new Error('أدخل رقم هاتف صحيحاً (مثال: 07701234567) ليتواصل معك المشتري عبر واتساب.');
+    if (files.length > 5) throw new Error('الحد الأقصى 5 صور لكل منتج.');
+    $('pBtn').disabled = true; setMsg('جارٍ رفع الصور ونشر المنتج...');
+
+    const image_urls = [];
+    for (const f of files) {
+      if (!f.type.startsWith('image/')) throw new Error('يمكن رفع الصور فقط.');
+      if (f.size > 5 * 1024 * 1024) throw new Error('حجم الصورة يجب ألا يتجاوز 5MB.');
+      const ext = (f.name.split('.').pop() || 'jpg').toLowerCase().replace(/[^a-z0-9]/g, '') || 'jpg';
+      const path = `${user.id}/${Date.now()}-${Math.random().toString(36).slice(2, 10)}.${ext}`;
+      const up = await sb.storage.from('product-images').upload(path, f, {cacheControl: '3600', upsert: false, contentType: f.type});
+      if (up.error) throw up.error;
+      image_urls.push(sb.storage.from('product-images').getPublicUrl(path).data.publicUrl);
+    }
+    const fullDesc = description + (phone ? `\n\nللتواصل حول المنتج: ${phone}` : '');
+    const ins = await sb.from('products').insert({seller_id: user.id, name, category, description: fullDesc, price: Math.round(price), phone, image_urls});
+    if (ins.error) throw ins.error;
+
+    setMsg('تم نشر المنتج بنجاح.', 'ok');
+    ['pName', 'pPrice', 'pPhone', 'pDesc', 'pImages'].forEach(id => $(id).value = '');
+    await loadProducts();
+  } catch (e) { setMsg(arabicError(e), 'err'); }
+  finally { $('pBtn').disabled = false; }
+}
+
+/* ───────── حذف منتج يخص البائع ───────── */
+async function deleteProduct(id) {
+  const p = findProduct(id);
+  if (!p || !user || p.seller_id !== user.id) return;
+  if (!confirm('هل تريد حذف هذا المنتج نهائياً؟')) return;
+  try {
+    const marker = '/product-images/';
+    const paths = (p.image_urls || []).map(u => { const i = u.indexOf(marker); return i < 0 ? '' : decodeURIComponent(u.slice(i + marker.length)); }).filter(Boolean);
+    const r = await sb.from('products').delete().eq('id', id);
+    if (r && r.error) throw r.error;
+    if (paths.length) { try { await sb.storage.from('product-images').remove(paths); } catch (e) {} }
+    await loadProducts();
+  } catch (e) { alert(arabicError(e)); }
+}
+
+/* ───────── تنزيل نسخة جاهزة للنشر (بيانات Supabase مدمجة) ───────── */
+function crc32(buf) {
+  let crc = 0xFFFFFFFF;
+  for (let i = 0; i < buf.length; i++) { crc ^= buf[i]; for (let k = 0; k < 8; k++) crc = (crc >>> 1) ^ (0xEDB88320 & -(crc & 1)); }
+  return (crc ^ 0xFFFFFFFF) >>> 0;
+}
+function makeZip(name, data) {
+  const nb = new TextEncoder().encode(name), crc = crc32(data), n = data.length;
+  const lh = new DataView(new ArrayBuffer(30));
+  lh.setUint32(0, 0x04034b50, true); lh.setUint16(4, 20, true); lh.setUint16(6, 0x0800, true);
+  lh.setUint16(12, 0x21, true); lh.setUint32(14, crc, true); lh.setUint32(18, n, true); lh.setUint32(22, n, true); lh.setUint16(26, nb.length, true);
+  const ch = new DataView(new ArrayBuffer(46));
+  ch.setUint32(0, 0x02014b50, true); ch.setUint16(4, 20, true); ch.setUint16(6, 20, true); ch.setUint16(8, 0x0800, true);
+  ch.setUint16(14, 0x21, true); ch.setUint32(16, crc, true); ch.setUint32(20, n, true); ch.setUint32(24, n, true); ch.setUint16(28, nb.length, true);
+  const ee = new DataView(new ArrayBuffer(22));
+  ee.setUint32(0, 0x06054b50, true); ee.setUint16(8, 1, true); ee.setUint16(10, 1, true); ee.setUint32(12, 46 + nb.length, true); ee.setUint32(16, 30 + nb.length + n, true);
+  return new Blob([lh, nb, data, ch, nb, ee], {type: 'application/zip'});
+}
+function bakedSource() {
+  return PAGE_SRC
+    .replace(/const SUPABASE_URL\s*=\s*"[^"]*";/, () => 'const SUPABASE_URL  = ' + JSON.stringify(CFG_URL) + ';')
+    .replace(/const SUPABASE_KEY\s*=\s*"[^"]*";/, () => 'const SUPABASE_KEY  = ' + JSON.stringify(CFG_KEY) + ';')
+    .replace(/const WHATSAPP_NUMBER\s*=\s*"[^"]*";/, () => 'const WHATSAPP_NUMBER = ' + JSON.stringify(CFG_WA || '9647XXXXXXXXX') + ';');
+}
+function downloadSite(kind) {
+  const bytes = new TextEncoder().encode(bakedSource());
+  const blob = kind === 'zip' ? makeZip('index.html', bytes) : new Blob([bytes], {type: 'text/html'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = kind === 'zip' ? 'souq-betna-site.zip' : 'index.html';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+
+/* ───────── تحميل المنتجات من Supabase ───────── */
+async function loadProducts() {
+  const r = await sb.from('products').select('*').order('created_at', {ascending: false}).limit(200);
+  if (r.error) {
+    products = [];
+    showSetup(BAKED ? 'تعذر تحميل المنتجات حالياً. حاول مرة أخرى بعد قليل.' : 'تعذر تحميل المنتجات (' + r.error.message + '). غالباً لم يُشغَّل كود SQL بعد.');
+  } else {
+    products = r.data;
+    hideSetup();
+  }
+  renderProducts();
+}
+
+/* ───────── حفظ بيانات الربط من داخل الصفحة ───────── */
+function saveConfig() {
+  let url = $('cfgUrl').value.trim(), key = $('cfgKey').value.trim();
+  const wa = $('cfgWa').value.replace(/\D/g, '');
+  try { url = new URL(url).origin; } catch (e) { return alert('رابط المشروع غير صحيح. يجب أن يبدأ بـ https:// وينتهي بـ supabase.co'); }
+  if (key.length < 20) return alert('المفتاح غير صحيح. انسخ مفتاح anon / publishable كاملاً.');
+  let payload = ''; try { payload = atob((key.split('.')[1] || '').replace(/-/g, '+').replace(/_/g, '/')); } catch (e) {}
+  if (/service_role/.test(payload) || key.startsWith('sb_secret')) return alert('هذا مفتاح سري (service_role). لا تستخدمه هنا أبداً. انسخ مفتاح anon أو publishable.');
+  try { localStorage.setItem('souq_cfg', JSON.stringify({url, key, wa})); } catch (e) { return alert('تعذر الحفظ في المتصفح.'); }
+  location.reload();
+}
+
+/* ───────── شريط الإعداد + نسخ SQL ───────── */
+function showSetup(text) {
+  $('setupText').textContent = text || '';
+  $('cfgUrl').value = CFG_URL; $('cfgKey').value = CFG_KEY; $('cfgWa').value = CFG_WA;
+  $('setup').classList.toggle('baked', BAKED);
+  $('setup').hidden = false; window.scrollTo({top: 0, behavior: 'smooth'});
+}
+function hideSetup() { $('setup').hidden = true; }
+async function copySQL() {
+  try { await navigator.clipboard.writeText(SETUP_SQL); }
+  catch (e) {
+    const t = document.createElement('textarea'); t.value = SETUP_SQL; document.body.appendChild(t); t.select();
+    document.execCommand('copy'); t.remove();
+  }
+  alert('تم نسخ كود SQL. الآن افتح SQL Editor في Supabase، الصقه واضغط Run.');
+}
+
+/* ───────── التشغيل ───────── */
+const PAGE_SRC = '<!doctype html>\n' + document.documentElement.outerHTML;   // نسخة نظيفة قبل أي تغيير
+async function init() {
+  if (BAKED && $('cfgLink')) $('cfgLink').remove();
+  renderCategories(); renderProducts(); saveCart(); renderUser();
+  $('searchInput').addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+  $('sort').addEventListener('change', renderProducts);
+  if (!sb) {
+    showSetup(CONFIGURED ? 'تعذر تحميل مكتبة Supabase. تأكد من اتصال الإنترنت.' : '');
+    return;
+  }
+  if (!BAKED) $('pubbar').hidden = false;
+  const s = await sb.auth.getSession();
+  await setUser(s.data.session ? s.data.session.user : null);
+  sb.auth.onAuthStateChange((ev, session) => { setTimeout(() => setUser(session ? session.user : null), 0); });
+  await loadProducts();
+}
+init();
+</script>
+</body>
+</html>
